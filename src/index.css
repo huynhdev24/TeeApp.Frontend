@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@material-tailwind/react/tailwind.css';
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+  button:focus {
+    outline: none !important;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 100vh;
+    transition: all 0.2s ease-in-out;
+    background: #c1c1c1;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    transition: all 0.2s ease-in-out;
+    background: #adacac;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    transition: all 0.2s ease-in-out;
+    background: #9c9a9a;
+  }
+
+  /* Dark mode */
+
+  /* Track */
+  .dark ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  /* Handle */
+  .dark ::-webkit-scrollbar-thumb {
+    background: #939596;
+    transition: all 0.2s ease-in-out;
+  }
+  /* Handle on hover */
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #7a7c7d;
+    transition: all 0.2s ease-in-out;
+  }
+  /* Handle on active */
+  .dark ::-webkit-scrollbar-thumb:active {
+    background: #6a6d6e;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* expand css */
+  .transition-base {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .clickable {
+    @apply hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-dark-hover dark:active:bg-dark-third cursor-pointer;
+  }
+  .clickable-secondary {
+    @apply hover:bg-gray-200 active:bg-gray-300 dark:hover:bg-dark-hover dark:active:bg-dark-third cursor-pointer;
+  }
+
+  .overlay {
+    @apply animate-fadeIn h-screen w-screen fixed inset-0 bg-white bg-opacity-60 dark:bg-black dark:bg-opacity-70 z-50 transition-base;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .max-row-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .max-row-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .max-row-10 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+}
+
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2 !important;
+}
